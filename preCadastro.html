@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Versailles - PréCadastro</title>
+	<link rel="stylesheet" type="text/css" href="css/limpar.css">
+	<link rel="stylesheet" type="text/css" href="css/preCadastro.css">
+	<link href="https://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="ico/hotelIco.ico">
+	<script type="text/javascript" src="js/preCadastro.js"></script>
+</head>
+<body>
+	<div id="apresentacao">
+		<input type="image" src="img/voltar.png" name="voltar" id="iconeVoltar" onclick="history.go(-1)">
+		<div id="apresentacaoConteudo">
+			<h1 id="titulo">Pré-Cadastro</h1>
+			<h1 class="tituloSelect">Hoteis: </h1>
+			<select id="hoteis" onchange="escolhaHotel()">
+				<option disabled="" selected="" id="principal" value="opcaoHotel">Opções</option>
+				<option value="saoPaulo">São Paulo</option>
+				<option value="rioDeJaneiro">Rio de Janeiro</option>
+				<option value="curitiba">Curitiba</option>
+			</select>
+			<h1 class="tituloSelect">Quartos: </h1>
+			<select id="quarto" onchange="escolhaQuarto()">
+				<option disabled="true" selected="true" value="opcao">Opções</option>
+				<option value="luxo">Luxo</option>
+				<option value="simples">Simples</option>
+				<option value="duo">Duo</option>
+				<option value="triplo">Triplo</option>
+			</select>
+			<button id="botaoTela" onclick="irFormulario()">Formulário</button>
+		</div>
+	</div>
+	<button onclick="irFormulario()" id="gerar">Gerar Formulario</button> <br>
+	<b id="palavra">Formulário</b>
+	<div id="dados">
+		<form name="formulario">
+			<label for="nome">Nome: </label>
+			<input type="name" name="nome" id="nome" onkeyup="Focus('logradouro')"> <br>
+			<label for="logradouro">Logradouro: </label>
+			<input type="text" name="logradouro" id="logradouro" onkeyup="Focus('cidade')"> <br>
+		 	<label for="cidade">Cidade: </label>
+		 	<input type="text" name="cidade" id="cidade" onkeyup="Focus('data')"> <br>
+		 	<label for="data">Data de Nascimento:</label>
+			<input type="date" name="data" id="data" onkeyup="Focus('sexoMasculino')"> <br>
+		 	<label for="sexo">Sexo:</label><br> 
+		 	<div> 
+		 		<input type="radio" name="sexo" id="sexoMasculino" value="masculino"> Masculino
+		 		<input type="radio" name="sexo" id="sexoFeminino" value="feminino"> Feminino
+		    	<input type="radio" name="sexo" id="outros" value="outros"> Outros <br>
+			</div>
+		 	<label for="email">E-mail: </label>
+		 	<input type="email" name="email" id="email" onkeyup="Focus('telefone')"> <br>
+		 	<label>Telefone: </label>
+		 	<input type="number" name="telefone" id="telefone" onkeyup="Focus('celular')"> <br>
+		 	<label for="celular">Celular: </label>
+		 	<input type="number" name="celular" id="celular" onkeyup="Focus('estadia')"> <br>
+		 	<label for="estadia">Tempo de Estadia: </label>
+		 	<div>
+		 		<label>Entrada:</label>
+		 		<input type="date" name="estadia" class="estadia" id="entrada" onkeyup="Focus('saida')">
+		 		<label>Saida:</label>
+		 		<input type="date" name="estadia" class="estadia" id="saida" onkeyup="Focus('confirmar')">
+		 	</div>
+		</form>
+		<button id="confirmar" onclick="confirmar()" onkeyup="confirmar()">Confirmar</button>
+ 	</div>
+	<footer>
+        <div id="creditos">
+            <h2>Hoteis:</h2>
+            <ul>
+                <li><a href="principal - CTBA.html">Curitiba</a></li> <br>
+                <li><a href="principal - RJ.html">Rio de Janeiro</a></li> <br>
+                <li><a href="principal - SP.html">São Paulo</a></li> <br>
+            </ul>
+        </div>
+        <small>Copyright © 2018 </small>
+	</footer>
+</body>
+</html>

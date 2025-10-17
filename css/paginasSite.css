@@ -1,0 +1,236 @@
+body{
+	width: 100%;
+	background-color: black;
+	font-family: 'Francois One', sans-serif;
+}
+/* Menu */
+#menu{
+  	position: -webkit-sticky;
+  	position: sticky;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    background-color: #8B6914;
+    z-index: 2;
+}
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+#linkPre {
+	padding: 14px 20px;
+}
+li a h1{
+	font-size: 40px;
+	text-shadow: 3px 3px #000000;
+}
+/* Fim Menu */
+.slider{
+	width: 90%;
+	position: relative;
+	height: 35em;
+	overflow: hidden;
+	z-index: -1;
+	border-bottom: 2px solid white;
+}
+
+.imagens{
+	margin-left: 14%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	animation-name: animacaoSlider;
+	animation-duration: 25s;
+	animation-iteration-count: infinite;
+}
+
+.imagens:nth-child(1){
+	animation-delay: 1s;
+}
+
+
+.imagens:nth-child(2){
+	animation-delay: 6s;
+}
+
+.imagens:nth-child(3){
+	animation-delay: 10s;
+}
+
+.imagens:nth-child(4){
+	animation-delay: 15s;
+}
+.imagens:nth-child(5){
+	animation-delay: 20s;
+}
+
+@keyframes animacaoSlider{
+	25%{
+		opacity: 1;
+		transform: scale(1.1, 1.1);
+	}
+	50%{
+		opacity: 1;
+	}
+}
+body h1{
+	color: white;
+	font-size: 120%;
+	margin-left: 10%;
+}
+
+#apresentacao{
+	width: 80%;
+}
+/*Corpo Site */
+
+.conteudo{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+
+}
+
+.textoConteudo{
+	font-size: 280%;
+	text-align: center;
+}
+
+.textoConteudo h1{
+	font-weight: bold;
+	text-align: center;
+}
+
+.rede{
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+
+.estado{
+	width: 30%;
+	display: inline-block;
+	margin: 10px;
+	position: relative;
+}
+div.estado:hover{
+	border:1px solid black;
+}
+
+.estado img{
+	width: 100%;
+	height: 20em;
+}
+
+figure {
+	border: 8px  solid white; 
+	width: 80%;margin: auto; 
+	box-shadow: 1px 1px 4px black; 
+}
+
+/* Fim corpo */
+
+/* Footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    color: white;
+}
+#creditos ul{
+	margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 20%;
+}
+footer #creditos{
+   font-size: 15px;
+   margin-left: 1%;
+}
+#creditos li{
+	list-style: disc;
+	float: left;
+	margin-left: 15%;
+}
+
+#creditos a{
+	color: purple;
+	text-decoration:underline;
+}
+/*Fim Footer */
+
+
+@media only screen and (max-width: 750px) {
+	/* Menu */
+	#menu{
+		height: 40px;
+		padding-top: 5PX;
+	}
+
+	li a {
+    	padding: 2px 0px;
+	}
+
+	#linkPre {
+		padding: 10px 20px;
+		font-size: 13px;
+	}
+
+	li a h1{
+		font-size: 30px;
+	}
+	/* Fim Menu */
+
+	/*Corpo Site */
+	.estado{
+		width: 99%;
+		height: 8em;
+		margin: 0px;
+		background-color: #ffffff;
+		margin-left: 0.5%;
+		margin-bottom: 5px;
+	}
+
+	.conteudo{
+		width: 99%;
+		margin-left: 0.5%;
+		margin-right: 0.5%;
+	}
+
+	.estado img{
+        width: 20%;
+        height: 100%;
+        float: left;
+   	 	border: transparent thin solid;
+    	margin: 0px 10px 10px 0;
+    	max-width: 186px;
+	}
+
+	.rede{
+		text-align: left;
+	}
+	.textoConteudo{
+		font-size: 100%;
+	}
+	.textoConteudo h1{
+		font-size: 180%;
+	}
+	/* Fim corpo */
+
+	/* Footer */
+
+	/*Fim Footer */
+}
